@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A discrete mathematics project">
+        <meta name="keywords" content="Discrete Math, Mathematics">
+        <meta name="author" content="our team">
+        <meta property="og:title" content="Discrete Mathematics"/>
+        <meta property="og:image" content="assets/img/crying-cat-banner.png"/>
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:description" content="A discrete mathematics project."/>
+        <meta property="og:url" content="#"/>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+        <meta property="og:type" content='website'/>
+        <meta name="theme-color" content="#39A2DB">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/calculator.ico" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="nav-content d-flex justify-content-between">
+                    <a class="navbar-brand" href="index.html">DISCRETE MATHEMATICS</a>
+                    <div class="d-flex align-items-center text-white">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-github"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+          <div class="left-pane" id="left-pane">
+            <span id="pane-close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="topic-container">
+                <ul class="topics">
+                    <li id="topic1" id="topic1">Factorial</li>
+                    <li id="topic2" id="topic2">Euclidian Algorithm</li>
+                    <li id="topic3" id="topic3">Propositional Logic</li>
+                    <li id="topic4" id="topic4">Direct Proofs</li>
+                    <li id="topic5" id="topic5">Truth Table</li>
+                    <li id="topic6" id="topic6">Universal Quantifier</li>
+                    <li id="topic7" id="topic7">Existential Quantifier</li>
+                    <li id="topic8" id="topic8">Sum and Products Rules</li>
+                    <li id="topic9" id="topic9">Arithmetic Sequence</li>
+                    <li id="topic10" id="topic10">Geometric Sequence</li>
+                    <li id="topic11" id="topic11">Sets</li>
+                    <li id="topic12" id="topic12">Relations</li>
+                    <li id="topic13" id="topic13">Recursive Algorithm</li>
+                    <li id="topic14" id="topic14">Complexity of Algorithm</li>
+                    <li id="topic15" id="topic15">Converse, Inverse, and Contrapositve</li>
+                </ul>
+            </div>
+          </div>
+          <div class="pane-btn" id="pane-open"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="right-pane">
+            <!-- HOME PANEL START -->
+            <div class="topic-wrapper show-topic mx-auto my-4" id="home-pane">
+              <div class="wrap-text">
+                <h1 class="h2">Discrete Mathematics</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio quasi aspernatur neque delectus reiciendis aliquid debitis, placeat quos, suscipit possimus ipsum repellat tenetur voluptates magnam ea sequi omnis explicabo.</p>
+              </div>
+
+              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="panel">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi, voluptate eum atque quaerat culpa expedita voluptates quam placeat odio.</p>
+              </div>
+              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+            </div>
+            <!-- HOME PANEL END -->
+
+            <!-- FIRST PANEL START -->
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window1">
+              <h2 class="w-title">Factorial</h2>
+              <p>In Mathematics, factorial is an important function, which is used to find how many ways things can be arranged or the ordered set of numbers. The factorial concept is used in many mathematical concepts such as probability, permutations and combinations, sequences and series, etc. In short, a factorial is a function that multiplies a number by every number below it till 1.<br>The formula to find the factorial of a number is<b> n! = n × (n-1) × (n-2) × (n-3) × ….× 3 × 2 × 1</b></p>
+              <div class="calc-content">
+                  <div class="input-container">
+                      <label class="input-label" for="factorial-i"><b>Factorial Number</b></label>
+                      <input type="text" name="factorial-i" id="factorial-i">
+                  </div>
+                  <br>
+                  <div class="input-container">
+                      <label class="input-label" for="factorial-o"><b>Output</b></label>
+                      <input type="text" name="factorial-o" id="factorial-o">
+                  </div>
+                  <button class="calculate" id="factorial-c">Calculate</button>
+              </div>
+            </div>
+            <!-- FIRST PANEL END -->
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window2">
+              <h2 class="w-title">Euclidian Algorithm</h2>
+                  <p>In mathematics, the Euclidean algorithm, or Euclid's algorithm, is an efficient method for computing the greatest common divisor (GCD) of two integers (numbers), the largest number that divides them both without a remainder.</p>
+                  <div class="calc-content">
+                      <div class="input-container">
+                          <label class="input-label" for="euclidean-i"><b>First Number</b></label>
+                          <input type="text" id="euclidean-i" name="euclidean-i">
+                      </div>
+                      <br>
+                      <div class="input-container">
+                          <label class="input-label" for="euclidean1-i"><b>Second Number</b></label>
+                          <input type="text" name="euclidean1-i" id="euclidean1-i">
+                      </div>
+                      <br>
+                      <div class="input-container">
+                          <label class="input-label" for="euclidean-o"><b>Output</b></label>
+                          <input type="text" name="euclidean-o" id="euclidean-o">
+                      </div>
+                      <button class="calculate" id="euclidean-c">Calculate</button>
+                  </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window3"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window4"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window5">
+              <h2 class="w-title">Truth Table</h2>
+              <p>A truth table is a breakdown of all the possible truth values returned by a logical expression. A truth value is typically either true or false, or 1 or 0. In some cases, the value might be based on another binary system, such as on and off or open and closed, but these are not as common.</p>
+              <div class="table-c">
+                  <div class="table-left">
+                      <h1>Conjunction</h1>
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>A</th>
+                                  <th>B</th>
+                                  <th>A /\ B</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>True</td>
+                                  <td>False</td>
+                                  <td>False</td>
+                              </tr>
+                              <tr>
+                                  <td>True</td>
+                                  <td>False</td>
+                                  <td>False</td>
+                              </tr>
+                              <tr>
+                                  <td>True</td>
+                                  <td>False</td>
+                                  <td>False</td>
+                              </tr>
+                              <tr>
+                                  <td>True</td>
+                                  <td>True</td>
+                                  <td>True</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="table-right">
+                      <h1>Disjunction</h1>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>A</th>
+                              <th>B</th>
+                              <th>A /\ B</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>False</td>
+                              <td>False</td>
+                              <td>False</td>
+                          </tr>
+                          <tr>
+                              <td>True</td>
+                              <td>False</td>
+                              <td>True</td>
+                          </tr>
+                          <tr>
+                              <td>True</td>
+                              <td>False</td>
+                              <td>True</td>
+                          </tr>
+                          <tr>
+                              <td>True</td>
+                              <td>False</td>
+                              <td>True</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+              </div>
+              <div class="table-n">
+                  <h1>Negation</h1>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>A</th>
+                              <th>~A</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>True</td>
+                              <td>False</td>
+                          </tr>
+                          <tr>
+                              <td>False</td>
+                              <td>True</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window6">
+              <h2 class="w-title">Universal Quantifier</h2>
+              <p>In mathematical logic, a universal quantification is a type of quantifier, a logical constant which is interpreted as "given any" or "for all". It expresses that a predicate can be satisfied by every member of a domain of discourse.</p>
+              <div class="image-box">
+                  <img src="assets/img/Universal 2.jpg" alt="List of Universal">
+                  <img src="assets/img/Universal 1.jpg" alt="List of Universal">
+              </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window7">
+              <h2 class="w-title">Existential Quantifier</h2>
+                  <p>In predicate logic, an existential quantification is a type of quantifier, a logical constant which is interpreted as "there exists", "there is at least one", or "for some". It is usually denoted by the logical operator symbol ∃, which, when used together with a predicate variable, is called an existential quantifier.</p>
+                  <div class="image-box">
+                      <img src="assets/img/Existential 1.jpg" alt="List of Existential">
+                      <img src="assets/img/Exinstential 2.jpg" alt="List of Existential">
+                  </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window8">
+                <h2 class="w-title">Sum and Product Rules</h2>
+                <p>Arithmetic sequence is an ordered set of numbers that have a common difference between each consecutive term. For example in the arithmetic sequence 3, 9, 15, 21, 27, the common difference is 6. An arithmetic sequence can be known as an arithmetic progression.</p>
+                <div class="calc-content" >
+                    <div class="sigma-male-container">
+                        <div class="left-sigma-wrapper">
+                            <input type="text" id="start-sigma">
+                            <span>Σ</span>
+                            <input type="text" id="end-sigma" placeholder="n">
+                        </div>
+                        <input type="text" name="" id="series-sigma" value="n">
+                    </div>
+                    <div class="series-sigma-output">
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                        <input type="text" id="sigma-total">
+                    </div>
+                </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window9">
+              <h2 class="w-title">Arithmetic Sequence</h2>
+                  <p>Arithmetic sequence is an ordered set of numbers that have a common difference between each consecutive term. For example in the arithmetic sequence 3, 9, 15, 21, 27, the common difference is 6. An arithmetic sequence can be known as an arithmetic progression.</p>
+                  <div class="calc-content">
+                          <div class="calc-box">
+                              <div class="input-boxes">
+                                  <div class="input-container">
+                                      <label class="input-label" for=""><b>a</b></label>
+                                      <input type="text" name="arithmetic-a" id="arithmetic-a">
+                                  </div>
+                                  <br>
+                                  <div class="input-container">
+                                      <label class="input-label" for="arithmetic-r"><b>d</b></label>
+                                      <input type="text" name="arithmetic-r" id="arithmetic-r">
+                                  </div>
+                                  <br>
+                                  <div class="input-container">
+                                      <label class="input-label" for="arithmetic-n"><b>n</b></label>
+                                      <input type="text" name="arithmetic-n" id="arithmetic-n">
+                                  </div>
+                                  <button class="calculate" id="arithmetic-c">Calculate</button>
+                              </div>
+                              <div class="output">
+                                  <div class="nth-output">
+                                      <p class="anth-text"><b id="anth-text">0</b></p>
+                                  </div>
+                                  <div class="series-output">
+                                      <p class="a-series"><b id="a-series">0</b></p>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window10">
+              <h2 class="w-title">Geometric Sequence</h2>
+                  <p>A geometric sequence is a sequence in which each term is found by multiplying the preceding term by the same value. Its general term is,. a n= a 1 r n - 1. The value r is called the common ratio. It is found by taking any term in the sequence and dividing it by its preceding term.</p>
+                  <div class="calc-content">
+                      <div class="calc-box">
+                          <div class="input-boxes">
+                              <div class="input-container">
+                                  <label class="input-label" for=""><b>a</b></label>
+                                  <input type="text" name="geometric-a" id="geometric-a">
+                              </div>
+                              <br>
+                              <div class="input-container">
+                                  <label class="input-label" for="geometric-r"><b>r</b></label>
+                                  <input type="text" name="geometric-r" id="geometric-r">
+                              </div>
+                              <br>
+                              <div class="input-container">
+                                  <label class="input-label" for="geometric-n"><b>n</b></label>
+                                  <input type="text" name="geometric-n" id="geometric-n">
+                              </div>
+                              <button class="calculate" id="geometric-c">Calculate</button>
+                          </div>
+                          <div class="output">
+                              <div class="nth-output">
+                                  <p class="nth-text"><b id="nth-text">0</b></p>
+                              </div>
+                              <div class="series-output">
+                                  <p class="g-series"><b id="g-series">0</b></p>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      
+                  </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window11"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window12"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window13">
+              <h2 class="w-title">Recursive Algorithm</h2>
+                  <p>A recursive algorithm is an algorithm which calls itself with "smaller (or simpler)" input values, and which obtains the result for the current input by applying simple operations to the returned value for the smaller (or simpler) input.</p>
+                  <div class="calc-content">
+                      <div class="input-container">
+                          <label class="input-label" for="factorial-ri"><b>Factorial Number</b></label>
+                          <input type="text" name="factorial-ri" id="factorial-ri">
+                      </div>
+                      <br>
+                      <div class="input-container">
+                          <label class="input-label" for="factorial-r"><b>Output</b></label>
+                          <input type="text" name="factorial-r" id="factorial-r">
+                      </div>
+                      <button class="calculate" id="factorial-rc">Calculate</button>
+                  </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window14">
+              <h2 class="w-title">Complexity of Algorithm</h2>
+                  <p>The complexity of an algorithm computes the amount of time and spaces required by an algorithm for an input of size (n). The complexity of an algorithm can be divided into two types. <b>The Time Complexity and the Space Complexity.</b></p>
+                  <div class="image-box">
+                      <img src="assets/img/Complexity.jpg" alt="List of Complexity">
+                      <img src="assets/img/Complexity 3.png" alt="List of Complexity">
+                  </div>
+            </div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window15"></div>
+            </div>
+          </div>
+        </main>
+    </body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="assets/js/index.js"></script>
+</html>
