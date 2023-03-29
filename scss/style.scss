@@ -82,13 +82,7 @@ body {
     }
 
 
-    .show-pane {
-        display: block;
-    }
-
-    .hide-pane {
-        display: none;
-    }
+    
     
     main .pane-btn {
         display: flex;
@@ -150,7 +144,6 @@ body {
         }
         
         .accordion:hover {
-            color: $light-color;
             background-color: $secondary-color;
           }
     // RIGHT PANE END
@@ -164,6 +157,7 @@ body {
 // PAGE STYLE START
 // Calculator Design
 .calc-content {
+    position: relative;
     margin: 2rem 0;
     
     input[type^="t"] {
@@ -218,6 +212,15 @@ body {
     .series-output .g-series b, .series-output .a-series b{
         font-size: 3rem;
     } 
+
+    .options {
+        display: flex;
+        justify-content: flex-end;
+   }
+
+   .options select {
+        padding: .5rem;
+   }
 }
 
 // Input designs
@@ -361,9 +364,10 @@ body {
         position: relative;
     }
     .left-sigma-wrapper span {
-    font-size: 5rem;
+        text-align: center;
+        font-size: 5rem;
    }
-   #start-sigma, #end-sigma {
+   #start-sigma, #end-sigma, #start-pi, #end-pi{
         padding: .2rem;
         position: absolute;
         width: 45px;
@@ -373,10 +377,11 @@ body {
    #start-sigma:focus, #end-sigma:focus, #series-sigma:focus, #sigma-total:focus {
      outline: none;
    }
-   #start-sigma {
+   #start-sigma, #start-pi {
     bottom: -2em;
    }
 
+   
 }
 
 .series-sigma-output {
@@ -393,7 +398,17 @@ body {
 }
 // PAGE STYLE END
 
+.show-pane {
+    display: block;
+}
 
+.hide-pane {
+    display: none;
+}
+
+.show-control {
+    display: flex;
+}
 // Responsiveness
 @media screen and (min-width: 320px) and (max-width: 480px) {
     @include mobile-device;

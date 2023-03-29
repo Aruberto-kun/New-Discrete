@@ -118,39 +118,71 @@ function recursiveAlgorithm(num) {
 }
 
 function calculate(start, end, operator, increment) {
-    let total = start;
     let temp = start;
-    let series = "";
-    for(let i = start-1; i < end; i++) {
-        if (operator == '+') {
+    let series = [];
+    for(; start <= end; start++) {
+        series.push(start + increment);
+        if (operator == '+')
             temp += increment;
-            console.log(temp)
-        } else if (operator == '-') {
+        else if (operator == '-')
             temp -= increment;
-        } else if (operator == '*') {
+        else if (operator == '*')
             temp *= increment;
-        } else {
+        else
             temp /= increment;
-        }
-        total += temp;
     }
+    return [series.reduce((total, num)=>{
+        return total + num;
+    }, 0),series.join(' + ')];
 }
 
 function getSigmaMale(start, end, condition) {
-    console.log(start, end)
     let [total, series] = [0, ""];
     let sigma = condition.split('')
-    console.log(sigma)
     if(condition == 'n') {
-        calculate(start, end, '+', 1)
+        [total, series] = calculate(start, end, '+', 0);
     } else {
-        calculate(start, end, sigma[1], Number(sigma[2]));
+        [total, series] = calculate(start, end, sigma[1], Number(sigma[2]));
     }
+    $('#sigma-series').val(series);
+    $('#sigma-total').val(`= ${total}`);
+}
+
+function calculatePI(start, end, operator, increment) {
+    let temp = start;
+    let series = [];
+    for(; start <= end; start++) {
+        series.push(start * increment);
+        if (operator == '+')
+            temp += increment;
+        else if (operator == '-')
+            temp -= increment;
+        else if (operator == '*')
+            temp *= increment;
+        else
+            temp /= increment;
+    }
+    return [series.reduce((total, num)=>{
+        return total * num;
+    }, 1),series.join(' • ')];
+}
+
+function getSigmaPI(start, end, condition) {
+    let [total, series] = [0, ""];
+    let sigma = condition.split('')
+    if(condition == 'n') {
+        [total, series] = calculatePI(start, end, '+', 1);
+    } else {
+        [total, series] = calculatePI(start, end, sigma[1], Number(sigma[2]));
+    }
+    $('#sigma-series').val(series);
+    $('#sigma-total').val(`= ${total}`);
 }
 
 
 $(document).ready(() => {
     const sigma_inputs = [$('#start-sigma'), $('#end-sigma'), $('#series-sigma')];
+    const pi_inputs = [$('#start-pi'), $('#end-pi'), $('#series-pi')]
     let acc = document.getElementsByClassName("accordion");
 
     for (let i = 0; i < acc.length; i++) {
@@ -171,6 +203,28 @@ $(document).ready(() => {
             getSigmaMale(Number($('#start-sigma').val()), Number($('#end-sigma').val()),$('#series-sigma').val());
         });
     }
+
+    for(let i of pi_inputs) {
+        $(i).change(() =>{
+            // console.log($(sigma_inputs[1]).val())
+            getSigmaPI(Number($('#start-pi').val()), Number($('#end-pi').val()),$('#series-pi').val());
+        });
+    }
+
+    $('select').change(() => {
+        let [sigma, pi] = [$('#sigma'), $('#pi')];
+        if($('select').val()=='pi') {
+            pi.removeClass('hide-pane');
+            pi.addClass('show-control');
+            sigma.addClass('hide-pane');
+            sigma.removeClass('show-control');
+        } else {
+            sigma.removeClass('hide-pane');
+            sigma.addClass('show-control');
+            pi.addClass('hide-pane');
+            pi.removeClass('show-control');
+        }
+    });
     
 
     let topic_elements = [
@@ -211,7 +265,6 @@ $(document).ready(() => {
 
     // Expand Pane Button 
     $('#pane-open').click(()=> {
-        console.log("OPeeeeeeeeeeeen!")
         for(let i of $('.accordion')) {
             $(i).css('background', '#000');
         }

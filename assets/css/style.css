@@ -76,14 +76,6 @@ main .left-pane .topic-container {
   color: #000;
 }
 
-.show-pane {
-  display: block;
-}
-
-.hide-pane {
-  display: none;
-}
-
 main .pane-btn {
   display: flex;
   justify-content: center;
@@ -140,7 +132,6 @@ main .right-pane .topic-wrapper {
 }
 
 .accordion:hover {
-  color: #fff;
   background-color: #A2DBFA;
 }
 
@@ -149,6 +140,7 @@ main .right-pane .topic-wrapper {
 }
 
 .calc-content {
+  position: relative;
   margin: 2rem 0;
 }
 .calc-content input[type^=t] {
@@ -194,6 +186,13 @@ main .right-pane .topic-wrapper {
 }
 .calc-content .series-output .g-series b, .calc-content .series-output .a-series b {
   font-size: 3rem;
+}
+.calc-content .options {
+  display: flex;
+  justify-content: flex-end;
+}
+.calc-content .options select {
+  padding: 0.5rem;
 }
 
 .input-container {
@@ -320,9 +319,10 @@ main .right-pane .topic-wrapper {
   position: relative;
 }
 .sigma-male-container .left-sigma-wrapper span {
+  text-align: center;
   font-size: 5rem;
 }
-.sigma-male-container #start-sigma, .sigma-male-container #end-sigma {
+.sigma-male-container #start-sigma, .sigma-male-container #end-sigma, .sigma-male-container #start-pi, .sigma-male-container #end-pi {
   padding: 0.2rem;
   position: absolute;
   width: 45px;
@@ -332,7 +332,7 @@ main .right-pane .topic-wrapper {
 .sigma-male-container #start-sigma:focus, .sigma-male-container #end-sigma:focus, .sigma-male-container #series-sigma:focus, .sigma-male-container #sigma-total:focus {
   outline: none;
 }
-.sigma-male-container #start-sigma {
+.sigma-male-container #start-sigma, .sigma-male-container #start-pi {
   bottom: -2em;
 }
 
@@ -346,6 +346,18 @@ main .right-pane .topic-wrapper {
   width: 50%;
   border-radius: 50px;
   margin: 1rem auto;
+}
+
+.show-pane {
+  display: block;
+}
+
+.hide-pane {
+  display: none;
+}
+
+.show-control {
+  display: flex;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
