@@ -119,37 +119,41 @@ function recursiveAlgorithm(num) {
 
 function calculate(start, end, operator, increment) {
     let total = start;
-    let temp = 0
+    let temp = start;
     let series = "";
-    for(; start <= end; start++) {
+    for(let i = start-1; i < end; i++) {
         if (operator == '+') {
-            start += increment;
+            temp += increment;
+            console.log(temp)
         } else if (operator == '-') {
-            start -= increment;
+            temp -= increment;
         } else if (operator == '*') {
-            start *= increment;
+            temp *= increment;
         } else {
-            total /= increment;
+            temp /= increment;
         }
+        total += temp;
     }
 }
 
 function getSigmaMale(start, end, condition) {
-    let total = start
+    console.log(start, end)
+    let [total, series] = [0, ""];
+    let sigma = condition.split('')
+    console.log(sigma)
     if(condition == 'n') {
-        calculate(start, end, '+', )
+        calculate(start, end, '+', 1)
     } else {
-        let sigma = condition.split()
-        calculate(start, end, sigma[1], sigma[2]);
+        calculate(start, end, sigma[1], Number(sigma[2]));
     }
 }
 
 
 $(document).ready(() => {
+    const sigma_inputs = [$('#start-sigma'), $('#end-sigma'), $('#series-sigma')];
     let acc = document.getElementsByClassName("accordion");
-    let i;
 
-    for (i = 0; i < acc.length; i++) {
+    for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
             let panel = this.nextElementSibling;
@@ -160,6 +164,14 @@ $(document).ready(() => {
             }
         });
     }
+
+    for(let i of sigma_inputs) {
+        $(i).change(() =>{
+            // console.log($(sigma_inputs[1]).val())
+            getSigmaMale(Number($('#start-sigma').val()), Number($('#end-sigma').val()),$('#series-sigma').val());
+        });
+    }
+    
 
     let topic_elements = [
         $('#topic1'), $('#topic2'), $('#topic3'), $('#topic4'), $('#topic5'),
@@ -179,7 +191,21 @@ $(document).ready(() => {
         topic_elements[i].click(() => {
             closeAll();
             window_elements[i].css("display", "block");
-
+            for(let i of $('.accordion')) {
+                $(i).css('background', '#F9F9F9');
+            }
+            left_pane_node.css({
+                width: '0',
+                padding: '0'
+            });
+            pane_close.fadeOut('fast');
+            pane_open.fadeIn(1000);
+            right_pane_node.css({
+                background: '#FAF9F6',
+                opacity: '1',
+                zIndex: 'inherit'
+            });
+            $('.topics').fadeOut('fast');
         });
     }
 
