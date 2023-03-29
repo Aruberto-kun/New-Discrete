@@ -117,6 +117,7 @@ function recursiveAlgorithm(num) {
         return num * recursiveAlgorithm(num - 1);
 }
 
+// Summation Notation Helper
 function calculate(start, end, operator, increment) {
     let temp = start;
     let series = [];
@@ -136,6 +137,7 @@ function calculate(start, end, operator, increment) {
     }, 0),series.join(' + ')];
 }
 
+// Summation notation
 function getSigmaMale(start, end, condition) {
     let [total, series] = [0, ""];
     let sigma = condition.split('')
@@ -148,25 +150,35 @@ function getSigmaMale(start, end, condition) {
     $('#sigma-total').val(`= ${total}`);
 }
 
+// Product notation helper
 function calculatePI(start, end, operator, increment) {
-    let temp = start;
+    let temp = 0;
     let series = [];
     for(; start <= end; start++) {
-        series.push(start * increment);
-        if (operator == '+')
-            temp += increment;
-        else if (operator == '-')
-            temp -= increment;
-        else if (operator == '*')
-            temp *= increment;
-        else
-            temp /= increment;
+        if (operator == '+') {
+            series.push(((increment) ? start + increment: start) * ((temp)? temp: 1));
+            temp = ((increment) ? start + increment: start) * ((temp)? temp: 1);
+            
+        } else if (operator == '-') {
+            series.push(((increment) ? start - increment: start) * ((temp)? temp: 1));
+            temp = ((increment) ? start + increment: start) * ((temp)? temp: 1);
+            
+        } else if (operator == '*') {
+            series.push(((increment) ? start * increment: start) * ((temp)? temp: 1));
+            temp = ((increment) ? start * increment: start) * ((temp)? temp: 1);
+            
+        } else {
+            series.push(((increment) ? start / increment: start) * ((temp)? temp: 1));
+            temp = ((increment) ? start / increment: start) * ((temp)? temp: 1);
+
+        }
     }
     return [series.reduce((total, num)=>{
         return total * num;
     }, 1),series.join(' • ')];
 }
 
+// Product Notation
 function getSigmaPI(start, end, condition) {
     let [total, series] = [0, ""];
     let sigma = condition.split('')
@@ -178,7 +190,6 @@ function getSigmaPI(start, end, condition) {
     $('#sigma-series').val(series);
     $('#sigma-total').val(`= ${total}`);
 }
-
 
 $(document).ready(() => {
     const sigma_inputs = [$('#start-sigma'), $('#end-sigma'), $('#series-sigma')];
@@ -307,8 +318,6 @@ $(document).ready(() => {
     });
     
     
-    
-    
     // Factorial Calculate Event
     $('#factorial-c').click(() => {
         $('#factorial-o').val(factorial($('#factorial-i').val()));
@@ -335,5 +344,13 @@ $(document).ready(() => {
     // Recursive Calculate Event
     $('#factorial-rc').click(() => {
         $('#factorial-r').val(recursiveAlgorithm($('#factorial-ri').val()));
+    });
+
+    $('#s-gen').click(()=> {
+        let [a, b] = [new Set($('#set-a').val().split(',')), new Set($('#set-b').val().split(','))]
+        let union = 
+        $('#union1').text(`{${Array.from(new Set([... a], [... b])).join(', ')}}`);
+        $('#union2').text(`{${Array.from(new Set([...a].filter(x => b.has(x)))).join(', ')}}`);
+        $('#union3').text(`{${Array.from(new Set([...a].filter(x => !b.has(x)))).join(', ')}}`)
     });
 });

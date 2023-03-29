@@ -84,7 +84,7 @@ main .pane-btn {
   font-size: 2rem;
   width: 70px;
   height: 70px;
-  background: #39A2DB;
+  background: #0D6EFD;
   text-align: center;
   border-radius: 100%;
   left: -2.5rem;
@@ -194,6 +194,33 @@ main .right-pane .topic-wrapper {
 .calc-content .options select {
   padding: 0.5rem;
 }
+.calc-content .sets-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.calc-content .sets-input input {
+  display: block;
+  padding: 0;
+  margin: 0.5rem auto;
+  width: 80%;
+  padding: 0.5rem;
+}
+.calc-content .sets-input #set-input:focus {
+  outline: none;
+}
+.calc-content .sets-input button {
+  background: #0D6EFD;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  height: 40px;
+  width: 80%;
+  margin: 0 auto;
+}
+.calc-content .output-content {
+  padding: 1rem 0;
+}
 
 .input-container {
   display: flex;
@@ -207,7 +234,7 @@ main .right-pane .topic-wrapper {
   width: 185px;
   padding: 0.45em;
   font-size: 1.2rem;
-  background: #39A2DB;
+  background: #0D6EFD;
 }
 .input-container input {
   border: none;
@@ -241,7 +268,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-c .table-left table tbody tr:nth-child(odd) {
-  background-color: #39A2DB;
+  background-color: #0D6EFD;
 }
 
 .table-c .table-right {
@@ -258,7 +285,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-c .table-right table tbody tr:nth-child(odd) {
-  background-color: #39A2DB;
+  background-color: #0D6EFD;
 }
 
 .table-n table {
@@ -272,7 +299,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-n table tbody tr:nth-child(odd) {
-  background-color: #39A2DB;
+  background-color: #0D6EFD;
 }
 
 .topic-wrapper .w-title {
@@ -283,8 +310,7 @@ main .right-pane .topic-wrapper {
 }
 .topic-wrapper .image-box {
   display: flex;
-  justify-content: space-around;
-  padding: 1rem;
+  justify-content: space-between;
   height: 520px;
 }
 .topic-wrapper .image-box img {

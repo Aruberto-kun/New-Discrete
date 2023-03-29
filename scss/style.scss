@@ -211,7 +211,7 @@ body {
 
     .series-output .g-series b, .series-output .a-series b{
         font-size: 3rem;
-    } 
+    }
 
     .options {
         display: flex;
@@ -221,6 +221,37 @@ body {
    .options select {
         padding: .5rem;
    }
+
+   .sets-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sets-input input {
+        display: block;
+        padding: 0;
+        margin: .5rem auto;
+        width: 80%;
+        padding: .5rem;
+    }
+
+    .sets-input #set-input:focus {
+        outline: none;
+    }
+    .sets-input button {
+        background: $primary-color;
+        text-transform: uppercase;
+        color: $light-color;
+        border: none;
+        height: 40px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .output-content {
+        padding: 1rem 0;
+    }
 }
 
 // Input designs
@@ -326,8 +357,7 @@ body {
 
     .image-box{
         display: flex;
-        justify-content: space-around;
-        padding: 1rem;
+        justify-content: space-between;
         height: 520px;
         
     }
@@ -336,6 +366,7 @@ body {
         width: 48%;
     }
 }
+
 
 #window1,
 #window2,
