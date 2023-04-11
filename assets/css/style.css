@@ -302,6 +302,10 @@ main .right-pane .topic-wrapper {
   background-color: #0D6EFD;
 }
 
+#window15 .show-topic {
+  width: 100%;
+}
+
 .topic-wrapper .w-title {
   margin: 1rem 0;
 }
@@ -447,4 +451,4 @@ main .right-pane .topic-wrapper {
     width: 55px;
     height: 55px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

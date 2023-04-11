@@ -119,6 +119,7 @@ function recursiveAlgorithm(num) {
 
 // Summation Notation Helper
 function calculate(start, end, operator, increment) {
+    console.log(operator)
     let temp = start;
     let series = [];
     for(; start <= end; start++) {
@@ -127,8 +128,9 @@ function calculate(start, end, operator, increment) {
             temp += increment;
         else if (operator == '-')
             temp -= increment;
-        else if (operator == '*')
+        else if (operator == '*') {
             temp *= increment;
+        }
         else
             temp /= increment;
     }
@@ -149,6 +151,7 @@ function getSigmaMale(start, end, condition) {
     $('#sigma-series').val(series);
     $('#sigma-total').val(`= ${total}`);
 }
+
 
 // Product notation helper
 function calculatePI(start, end, operator, increment) {

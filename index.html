@@ -28,9 +28,9 @@
                 <div class="nav-content d-flex justify-content-between">
                     <a class="navbar-brand" href="index.html">DISCRETE MATHEMATICS</a>
                     <div class="d-flex align-items-center text-white">
-                        <span><i class="fa-brands fa-facebook"></i></span>
-                        <span><i class="fa-brands fa-github"></i></span>
-                        <span><i class="fa-brands fa-twitter"></i></span>
+                        <a href="https://facebook.com" style="color: inherit;"><span><i class="fa-brands fa-facebook"></i></span></a>
+                        <a href="https://github.com/Aruberto-kun/New-Discrete " style="color: inherit;"><span><i class="fa-brands fa-github"></i></span></a>
+                        <a href="https://twitter.com/" style="color: inherit;"><span><i class="fa-brands fa-twitter"></i></span></a>
                     </div>
                 </div>
             </nav>
@@ -47,7 +47,7 @@
                     <li id="topic5" id="topic5">Truth Table</li>
                     <li id="topic6" id="topic6">Universal Quantifier</li>
                     <li id="topic7" id="topic7">Existential Quantifier</li>
-                    <li id="topic8" id="topic8">Sum and Products Rules</li>
+                    <li id="topic8" id="topic8">Summation Rule</li>
                     <li id="topic9" id="topic9">Arithmetic Sequence</li>
                     <li id="topic10" id="topic10">Geometric Sequence</li>
                     <li id="topic11" id="topic11">Sets</li>
@@ -64,20 +64,20 @@
             <div class="topic-wrapper show-topic mx-auto my-4" id="home-pane">
               <div class="wrap-text">
                 <h1 class="h2">Discrete Mathematics</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio quasi aspernatur neque delectus reiciendis aliquid debitis, placeat quos, suscipit possimus ipsum repellat tenetur voluptates magnam ea sequi omnis explicabo.</p>
+                <p>Welcome to our Project.</p>
               </div>
 
-              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <button class="accordion"><span><b>What is this project about?</b></span><i class="fa-solid fa-chevron-down"></i></button>
               <div class="panel">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi, voluptate eum atque quaerat culpa expedita voluptates quam placeat odio.</p>
+                <p>This will serve as our group project in DISCRETE MATHEMATICS COURSE</p>
               </div>
-              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <button class="accordion"><span><b>What is the purpose of this project?</b></span><i class="fa-solid fa-chevron-down"></i></button>
               <div class="panel">
-                <p>Lorem ipsum...</p>
+                <p>The purpose of this project is to showcase 15 different programs</p>
               </div>
-              <button class="accordion"><span>What is this project about?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <button class="accordion"><span><b>How can this help students?</b></span><i class="fa-solid fa-chevron-down"></i></button>
               <div class="panel">
-                <p>Lorem ipsum...</p>
+                <p>It will help students explore different programs that are available in this website.</p>
               </div>
             </div>
             <!-- HOME PANEL END -->
@@ -121,7 +121,11 @@
                       <button class="calculate" id="euclidean-c">Calculate</button>
                   </div>
             </div>
-            <div class="topic-wrapper hide-pane mx-auto my-4" id="window3"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window3">
+                <h2 class="w-title">Propositional Logic</h2>
+                <p>Propositional logic, also known as sentential logic, is that branch of logic that studies ways of combining or altering statements or propositions to form more complicated statements or propositions. Joining two simpler propositions with the word “and” is one common way of combining statements.</p>
+                <img src="assets/img/Propositional logic.png" width="80%" style="margin: 0 auto; display: block;">
+            </div>
             <div class="topic-wrapper hide-pane mx-auto my-4" id="window4">
                 <h2 class="w-title">Direct Proofs</h2>
                 <p>A direct proof is a sequence of statements which are either givens or deductions from previous statements, and whose last statement is the conclusion to be proved. Variables: The proper use of variables in an argument is critical.</p>
@@ -242,8 +246,8 @@
                   </div>
             </div>
             <div class="topic-wrapper hide-pane mx-auto my-4" id="window8">
-                <h2 class="w-title">Sum and Product Rules</h2>
-                <p>The sum rule tells us in how many ways one can make a single choice from two disjoint sets of alternatives. The product rule tells us in how many ways one can make one choice from each of two sets of alternatives. Both rules generalize to larger families of sets.</p>
+                <h2 class="w-title">Summation Rule</h2>
+                <p>In mathematics, summation is the addition of a sequence of any kind of numbers, called addends or summands; the result is their sum or total.</p>
                 <div class="calc-content" >
                     <div class="sigma-male-container" id="sigma">
                         <div class="left-sigma-wrapper">
@@ -253,24 +257,24 @@
                         </div>
                         <input type="text" name="" id="series-sigma" value="n">
                     </div>
-                    <div class="sigma-male-container hide-pane" id="pi">
+                    <!-- <div class="sigma-male-container hide-pane" id="pi">
                         <div class="left-sigma-wrapper">
                             <input type="text" id="end-pi">
                             <span>π</span>
                             <input type="text" id="start-pi" placeholder="n">
                         </div>
                         <input type="text" name="" id="series-pi" value="n">
-                    </div>
+                    </div> -->
                     <div class="series-sigma-output">
                         <textarea name="" id="sigma-series" cols="30" rows="5"></textarea>
                         <input type="text" id="sigma-total">
                     </div>
-                    <div class="options">
+                    <!-- <div class="options">
                         <select name="option" id="option">
                             <option value="pi">Product Notation</option>
                             <option value="sigma" selected>Summation Notation</option>
                         </select>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="topic-wrapper hide-pane mx-auto my-4" id="window9">
@@ -342,22 +346,41 @@
                   </div>
             </div>
             <div class="topic-wrapper hide-pane mx-auto my-4" id="window11">
-                <h2 class="w-title">Sets</h2>
-                <p>A set is an unordered collection of different elements. A set can be written explicitly by listing its elements using set bracket. If the order of the elements is changed or any element of a set is repeated, it does not make any changes in the set.</p>
+                <h2 class="w-title">Sets (Union)</h2>
+                <p>In set theory, the union of a collection of sets is the set of all elements in the collection. It is one of the fundamental operations through which sets can be combined and related to each other. A nullary union refers to a union of zero sets and it is by definition equal to the empty set.</p>
                 <div class="calc-content">
                     <div class="sets-input">
                         <input type="text" id="set-a" value="1,2,3,5">
-                        <input type="text" id="set-b" value="1,2,3,4">
+                        <input type="text" id="set-b" value="1,2,3">
                         <button id="s-gen">GENERATE</button>
                     </div>
                     <div class="output-content">
                         <p><span>Union of set A and B: </span><span id="union1">{1, 2, 3, 5}</span></p>
-                        <p><span>Union of set A and B: </span><span id="union2">{1, 2, 3}</span></p>
-                        <p><span>Union of set A and B: </span><span id="union3">{5}</span></p>
+                        <p><span>Union of set A : </span><span id="union2">{1, 2, 3}</span></p>
+                        <p><span>Union of set B: </span><span id="union3">{5}</span></p>
                     </div>
                 </div>
             </div>
-            <div class="topic-wrapper hide-pane mx-auto my-4" id="window12"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window12">
+                <h2 class="w-title">Relations</h2>
+                <p>A conditional statement consists of two parts, a hypothesis in the “if” clause and a conclusion in the “then” clause.  For instance, “If it rains, then they cancel school.”</p>
+                <p> "It rains" is the hypothesis.<br>"They cancel school" is the conclusion.</p>
+                <button class="accordion"><span><b>REFLEXIVE RELATION</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="panel">
+                    <p>A binary relation <i>R</i> is called reflexive if and only if <i>∀a ∈ A, aRa.</i> So, a relation <i>R</i> is reflexive if it relates every element of <i>A</i> to itself.</p>
+                    <img src="assets/img/Reflexive.svg" width="50%" style="margin: 0 auto; display: block;">
+                </div>
+                <button class="accordion"><span><b>IRREFLEXIVE RELATION</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="panel">
+                    <p>A binary relation <i>R</i> on a set <i>A</i> is called irreflexive if <i>aRa.</i> does not hold for any <i>a ∈ A</i> This means that there is no element in <i>R</i> which is related to itself.</p>
+                    <img src="assets/img/Irreflexive.svg" width="50%" style="margin: 0 auto; display: block;">
+                </div>
+                <button class="accordion"><span><b>SYMMETRIC RELATION</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                <div class="panel">
+                    <p>A binary relation <i>R</i> on a set <i>A</i> is called symmetric if for all <i>a,b ∈ A</i> it holds that if <i>aRb then bRa.</i> in other words, the relative order of the components in an ordered pair does not matter - if a binary relation contains an <i>(b,a)</i> element, it will also include the symmetric element <i>(b,a).</i></p>
+                    <img src="assets/img/Symmetric.svg" width="50%" style="margin: 0 auto; display: block;">
+                </div>
+            </div>
             <div class="topic-wrapper hide-pane mx-auto my-4" id="window13">
               <h2 class="w-title">Recursive Algorithm</h2>
                   <p>A recursive algorithm is an algorithm which calls itself with "smaller (or simpler)" input values, and which obtains the result for the current input by applying simple operations to the returned value for the smaller (or simpler) input.</p>
@@ -382,7 +405,130 @@
                       <img src="assets/img/Complexity 3.png" alt="List of Complexity">
                   </div>
             </div>
-            <div class="topic-wrapper hide-pane mx-auto my-4" id="window15"></div>
+            <div class="topic-wrapper hide-pane mx-auto my-4" id="window15">
+                <h2 class="w-title">Converse, Inverse, Contrapostive </h2>
+                <p>A conditional statement consists of two parts, a hypothesis in the “if” clause and a conclusion in the “then” clause.  For instance, “If it rains, then they cancel school.”</p>
+                <p> "It rains" is the hypothesis.<br>"They cancel school" is the conclusion.</p>
+                    <button class="accordion"><span><b>CONVERSE</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="panel">
+                    <p>To form the converse of the conditional statement, interchange the hypothesis and the conclusion.
+                            <br>The converse of "If it rains, then they cancel school" is "If they cancel school, then it rains."</p>
+                        </div>
+                        <button class="accordion"><span><b>INVERSE</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="panel">
+                        <p>To form the inverse of the conditional statement, take the negation of both the hypothesis and the conclusion.
+                            <br> The inverse of “If it rains, then they cancel school” is “If it does not rain, then they do not cancel school.”</p>
+                        </div>
+                        <button class="accordion"><span><b>CONTRAPOSITIVE</b></span><i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="panel">
+                            <p>To form the contrapositive of the conditional statement, interchange the hypothesis and the conclusion of the inverse statement. 
+                            <br>The contrapositive of "If it rains, then they cancel school" is "If they do not cancel school, then it does not rain."</p>
+                        </div>
+              <div class="table-c">
+                  <div class="table-left">
+                      <h1>CONVERSE</h1>
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>p</th>
+                                  <th>q</th>
+                                  <th>q ➞ p</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>True</td>
+                                  <td>True</td>
+                                  <td>True</td>
+                              </tr>
+                              <tr>
+                                  <td>True</td>
+                                  <td>False</td>
+                                  <td>True</td>
+                              </tr>
+                              <tr>
+                                  <td>False</td>
+                                  <td>True</td>
+                                  <td>False</td>
+                              </tr>
+                              <tr>
+                                  <td>False</td>
+                                  <td>False</td>
+                                  <td>True</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="table-right">
+                      <h1>INVERSE</h1>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>~p</th>
+                              <th>~q</th>
+                              <th>~p ➞ ~q </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>False</td>
+                              <td>False</td>
+                              <td>True</td>
+                          </tr>
+                          <tr>
+                              <td>False</td>
+                              <td>True</td>
+                              <td>True</td>
+                          </tr>
+                          <tr>
+                              <td>True</td>
+                              <td>False</td>
+                              <td>False</td>
+                          </tr>
+                          <tr>
+                              <td>True</td>
+                              <td>True</td>
+                              <td>True</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  </div>
+              </div>
+              <div class="table-n">
+                  <h1>CONTRAPOSITIVE</h1>
+                  <table>
+                      <thead>
+                            <tr>
+                                <th>~p</th>
+                                <th>~q</th>
+                                <th>~q ➞ ~p </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                        </tbody>
+                    </table>
+              </div>
+            </div>
             </div>
           </div>
         </main>
