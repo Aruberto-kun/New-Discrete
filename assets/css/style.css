@@ -268,7 +268,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-c .table-left table tbody tr:nth-child(odd) {
-  background-color: #0D6EFD;
+  background-color: #4a99f3;
 }
 
 .table-c .table-right {
@@ -285,7 +285,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-c .table-right table tbody tr:nth-child(odd) {
-  background-color: #0D6EFD;
+  background-color: #4a99f3;
 }
 
 .table-n table {
@@ -299,7 +299,7 @@ main .right-pane .topic-wrapper {
   border: 1px solid #000;
 }
 .table-n table tbody tr:nth-child(odd) {
-  background-color: #0D6EFD;
+  background-color: #4a99f3;
 }
 
 #window15 .show-topic {
